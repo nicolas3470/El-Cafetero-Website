@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>El Cafetero</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<meta name="description" content="El Cafetero Bakery is a Colombian restaurant and bakery in White Plains, NY. Enjoy delicious Colombian food, fresh juices, and the best Colombian coffee. Phone #: (914) 949-8385" />
+        <meta name="author" content="Nicolas Munera" />
+        <meta name="keywords" content="cafetero, bakery, colombian, restaurant, white plains, coffee, food, dinner, breakfast, lunch, spanish, hispanic, comida, colombiana, desayuno, almuerzo, panaderia, restaurante, cafe" />
+        <link rel="shortcut icon" href="Logo.png">
+        <link rel="stylesheet" type=text/css href="Formatting.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--     	<link type="text/css" href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" /> --><script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
+    </head>
+    <body>	    	
+    	<!-- Main Navigation -->
+    	<div id="coffee_container">
+    		<img class="logo" src="Images/Logo.png" alt="El Cafetero Logo">
+    		<!-- Center Information -->
+    		<div id="center_box">
+    			<!-- Home -->
+    			<div id="home">
+    				<p class="welcome_font"> &iexcl;Bienvenido! </p>
+    				<p class="welcome_msg_font"> El Cafetero Bakery es un restaurante y panaderia en White Plains, New York. Oferecemos una experiencia autentica y cien porciento colombiana, ademas de servir comida typicia y exquisita. No importa que tiempo del dia es - tenemos desayno, almuerzo, y bebidas, a los precios que te van a satisfacer. Tambien ofrecemos comidas para fiestas y grupos grandes. </p>
+    				<hr />
+    				<div class="vert_line"></div>
+    				<div class="vert_line2"></div>
+    				<div class="vert_line3"></div>
+    				<img class="front_display" src="Images/Front.jpeg" alt="Front Sign Display">
+    				<img class="bakery_display" src="Images/Display.jpeg" alt="Bakery Display Picture">
+    				<hr />
+    				<div class="vert_line"></div>
+    				<div class="vert_line2"></div>
+    				<div class="vert_line3"></div>
+    				<img class="front_display" src="Images/Front 2.jpeg" alt="Bakery Display Picture 2">
+    				<img class="bakery_display" src="Images/Display 2.jpeg" alt="Bakery Display Picture 3">
+    				<hr />
+    			</div>
+    			<!-- Menu -->
+    			<div id="menu">
+    				<button id="entire_menu" onclick="window.open('Images/El Cafetero Menu.pdf')">Ver Menu Entero</button>
+    				<img id="preview_prev_arrow" class="preview_arrow" src="Images/Preview Left Arrow.png" onclick="scrollPreviewPics(-1)" alt="previous preview pictures">
+    				<img id="preview_next_arrow" class="preview_arrow" src="Images/Preview Right Arrow.png" onclick="scrollPreviewPics(1)" alt="next preview pictures">
+    				<div>
+    					<!-- Menu Navigation -->
+    					<ul>
+    						<li>
+    							<button class="menu_bar" id="breakfast_btn" onclick="displayMenu('breakfast')"> Desayuno </button>
+    						</li>
+    						<li>
+    							<button class="menu_bar" id="lunch_btn" onclick="displayMenu('lunch')"> Almuerzo </button>
+    						</li>
+    						<li>
+    							<button class="menu_bar" id="bakery_btn" onclick="displayMenu('bakery')"> Panaderia </button>
+    						</li>
+    					</ul>
+    					<ul>
+    						<li>
+    							<button class="menu_bar" id="specialties_btn" onclick="displayMenu('specialties')"> Especialidades </button>
+    						</li>
+    						<li>
+    							<button class="menu_bar" id="drinks_btn" onclick="displayMenu('drinks')"> Bebidas </button>
+    						</li>
+    						<li>
+    							<button class="menu_bar" id="appetizers_btn" onclick="displayMenu('appetizers')"> Antojitos </button>
+    						</li>
+    					</ul>
+    				</div>
+    				<!-- Menu Slideshow -->
+    				<div id="slideshow">
+    					<img id="next_arrow" class="arrow" src="Images/Right Arrow.png" onclick="nextImage(1)" alt="arrow">
+    					<img id="prev_arrow" class="arrow" src="Images/Left Arrow.png" onclick="nextImage(-1)" alt="arrow">
+    					<div id="item_name"> Desayuno Tradicional <br/> <span id="item_desc" style="font-size: 12px"> Descripcion de la primera foto va aqui </span> </div>
+    					<img id="slide_pic" src="breakfast/breakfast_1.jpeg" alt="Slide Picture">
+    					<div id="slide_preview_box">
+    						<ul id="preview_box">
+    						</ul>
+    					</div>
+    				</div>
+     			</div>
+     			
+     			<!-- Today's Special -->
+     			<div id="specials">
+     				<div class="welcome_font">
+     					Sopa del Dia
+     				</div>
+     				<ul>
+     					<li id="mon" class="soup_box">
+     						<span class="soup_box_day"> Lunes</span> <br />
+     						<span class="soup_box_item"> Sopa de Tostones </span>
+     					</li>
+     					<li id="tues" class="soup_box">
+     						<span class="soup_box_day"> Martes</span> <br />
+     						<span class="soup_box_item"> Sopa de Pollo </span>
+     					</li>
+     					<li id="wednes" class="soup_box">
+     						<span class="soup_box_day"> Miercoles</span> <br />
+     						<span class="soup_box_item"> Sopa de Lentejas </span>
+     					</li>
+     					<li id="thurs" class="soup_box">
+     						<span class="soup_box_day"> Jueves</span> <br />
+     						<span class="soup_box_item"> Frijoles Antioque&ntilde;os </span>
+     					</li>
+     					<li id="fri" class="soup_box">
+     						<span class="soup_box_day"> Viernes</span> <br />
+     						<span class="soup_box_item"> Sancocho de Pescado </span>
+     					</li>
+     					<li id="sat" class="soup_box">
+     						<span class="soup_box_day"> Sabado</span> <br />
+     						<span class="soup_box_item"> Sancocho de Costilla </span>
+     					</li>
+     					<li id="sun" class="soup_box">
+     						<span class="soup_box_day"> Domingo</span> <br />
+     						<span class="soup_box_item"> Sancocho de Gallina </span>
+     					</li>
+     				</ul>
+     			</div>
+     			
+     			<!-- Contact Us -->
+     			<div id="contact">
+     				<p id="find_us" class="welcome_font"> &iexcl;Encuentranos! </p>
+     				<hr class="contact_hr" />
+     				<div id="hours_box" class="welcome_msg_font">
+     					<b> Direccion: </b> <br /> 124 E. Post Rd #B <br/> White Plains, NY 10601 <br /> (914) 0949-8385 <br />
+     					<br /> <b> Horas de Operacion: </b> <br /> Diario: 7a.m. - 9 p.m.
+     				</div>
+     				<div id="facebook_plugin">
+     					<div class="fb-like-box" data-href="http://www.facebook.com/pages/El-Cafetero-Bakery/115164685173179" data-width="200" data-height="320" data-show-faces="true" data-stream="false" data-header="true"></div>
+     				</div>
+     				<div id="google_maps_box">
+						<iframe width="350" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=el+cafetero+bakery&amp;aq=&amp;sll=40.697488,-73.979681&amp;sspn=0.52371,1.234589&amp;ie=UTF8&amp;hq=el+cafetero+bakery&amp;hnear=&amp;radius=15000&amp;t=m&amp;ll=41.074304,-73.792591&amp;spn=0.055646,0.060081&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe>
+					</div>
+					<hr class="contact_hr" />
+					<div id="google_maps_link">
+     					<a class="external_link" target="_blank" href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=el+cafetero+bakery&amp;aq=&amp;sll=40.697488,-73.979681&amp;sspn=0.52371,1.234589&amp;ie=UTF8&amp;hq=el+cafetero+bakery&amp;hnear=&amp;radius=15000&amp;t=m&amp;ll=41.028495,-73.766552&amp;spn=0.071946,0.071946"> Ver mapa grande </a>		
+     				</div>
+     				<div id="yelp_link">
+     					<a class="external_link" target="_blank" href="http://www.yelp.com/biz/el-cafetero-bakery-white-plains"> Ver evaluaciones en Yelp! </a>
+     				</div>
+     			</div>
+    		</div>
+
+    		<div id="transparent_main_nav">
+    			<ul>
+    				<li>
+    					<button id="home_btn" class="link_button" onclick="displayWindow('home')"> Inicio </button>
+    				</li>
+    				<li>
+    					<button id="menu_btn" class="link_button" onclick="displayWindow('menu')"> Menu </button>
+    				</li>
+    				<li>
+    					<button id="specials_btn" class="link_button" onclick="displayWindow('specials')"> Especial de Hoy  </button>
+    				</li>
+    				<li>
+    					<button id="contact_btn" class="link_button" onclick="displayWindow('contact')"> Contactenos </button>
+    				</li>
+    				<li>
+    					<a class="link_button" href="index.html"> English Site </a>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
+    	
+    	<!-- Bottom Body Wrapper -->
+    	<div class="body_wrapper">
+    		<!-- Bottom Navigation Menu -->
+				<div id="bottom_nav_font">
+					<button class="black_background link_button" onclick='document.getElementById("home_btn").click()'> Inicio </button> | 
+					<button class="black_background link_button" onclick='document.getElementById("menu_btn").click()'> Menu </button> |
+					<button class="black_background link_button" onclick='document.getElementById("specials_btn").click()'> Especial de Hoy </button> | 
+					<button class="black_background link_button" onclick='document.getElementById("contact_btn").click()'> Contactenos </button> | 
+					<a class="black_background" href="index.html"> English Site </a> 
+				</div>
+			<!-- Website Creator -->
+			<div class="small_font">
+				<p style="text-align: center"> Pagina Dise&ntilde;ada por <a id="nick_link" target="_blank" href="http://www.linkedin.com/in/nicolasmunera"> Nicolas Munera </a> </p>
+			</div>
+		</div>
+		
+		<!-- Page Scripts -->
+		
+		<!-- Facebook Like Box Script -->
+    	<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+  				var js, fjs = d.getElementsByTagName(s)[0];
+  				if (d.getElementById(id)) return;
+  				js = d.createElement(s); js.id = id;
+  				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+		
+		<script>
+			//Globals
+			var active = "home";
+			var menu_active = "";
+			var num_menu_items = {breakfast:4, lunch:3, bakery:15, specialties:10, drinks: 14, appetizers:8};
+			var menu_desc = {breakfast: ["Traditional Breakfast","Campesino Breakfast", "Chunchurria with Arepa", "Monta&ntilde;ero Breakfast"], lunch: ["Grilled Steak","Half Chicken","Whole Chicken"], bakery:["Cheese Bread","Fried Dough Balls","Milk Bread","Sweet Corn Cake","Flan","Cheese-filled Horn Bread","Coconut Cookies","Corn Bread","Mija Bread","Cuca Cookies","Seasoned Bread",'"Good" Bread',"Gloria Pie","Black Cake",'"Sighs"'],specialties: ["Peasant Platter","Beef Tongue","Flank Steak","Fish Piccata","Chicken with Rice","Beef Liver","Grilled Round Steak","Steak with Onions","Fried Tilapia","Sauteed Tenderloin"], drinks:["Natural Fruit Juices","Colombian Coffee","Hot Chocolate","Oatmeal Drink","Aguapanela with Milk", "Aguapanela with Lemon","Pony Malt Beverage","Mango Hit Juice","Lulo Hit Juice","Apple Soda","Grape Soda","Orange Soda","Sparkling Water","Cola-cola"] ,appetizers: ["Pork Belly with Arepa","Blood Sausage with Arepa","Chorizo with Arepa","Beef Empanadas","Hawaiian Empanada","Chicken Pie","Cheese Stick","Steak with Arepa"]};
+			var span_menu_desc = {breakfast: ["Desayu&ntilde;o Typico","Desayu&ntilde;o Campesino", "Chunchurria con Arepa", "Desayu&ntilde;o Monta&ntilde;ero"], lunch: ["Carne Asada","Medio Pollo","Pollo Entero"], bakery:["Pan de Queso","Buntilde;elos","Pan Leche","Arepa de Chocolo","Flan","Pan Cacho","Galletas de Coco","Pan Maiz","Pan Mija","Cucas","Pan Ali&ntilde;ado","Pandebono","Pastel Gloria","Torta Negra","Suspiros"],specialties: ["Bandeja Paisa","Lengua a la Criolla","Sobrebarriga a la Criolla","Pescado Picata","Arroz con Pollo","Higado al Gusto","Carne Asada","Steak with Onions","Mojarra Frita","Lomo Saltado"], drinks:["Jugos Naturales","Cafe Colombiano","Chocolate Caliente","Avena","Aguapanela con Leche y Queso", "Aguapanela con Limon","Pony Malta","Hit de Mango","Hit de Lulo","Manzana Postobon","Uva Postobon","Naranja Postobon","Bretantilde;a Postobon","Cola-cola"] ,appetizers: ["Chicarron con Arepa","Morcilla con Arepa","Chorizo con Arepa","Empanadas de Carne","Empanadas Hawaianas","Pastel de Pollo","Dedo de Queso","Carne Asada con Arepa"]};
+			var box_height_on = false;
+			
+			document.getElementById("home_btn").style.textShadow = "#550000 2px 2px 10px";
+			
+			//box soup of the day
+			function boxSoup() {
+				var days = ["sun","mon","tues","wednes","thurs","fri","sat"];
+				var today = new Date().getDay();
+				document.getElementById(days[today]).style.border = "2px solid #550000";
+				if (today%2 != 0) {
+					document.getElementById(days[today]).style.marginBottom = "0";
+				}
+			}
+			
+			//Main Navigation Buttons
+			function displayWindow(button) {
+				if(active != button) {
+					document.getElementById(button + "_btn").style.textShadow = "#550000 2px 2px 10px";
+					document.getElementById(active+"_btn").style.textShadow = "";
+					document.getElementById(active).style.display = "none";
+					active = button;
+					$("#"+button).fadeIn(1000);
+					if(button == "menu") {
+						document.getElementById("breakfast_btn").click();
+					} else if (button == "specials") {
+						boxSoup();
+					}
+				}
+			}
+		
+			//Menu Navigation Buttons
+			function displayMenu(button) {
+				 if(menu_active != button) {
+					document.getElementById(button + "_btn").style.borderBottom = "2px solid #550000";
+					document.getElementById(button + "_btn").style.paddingBottom = "0px";
+					if (menu_active != "") {
+						document.getElementById(menu_active+"_btn").style.border = "0";
+						document.getElementById(menu_active+"_btn").style.paddingBottom = "2px";
+						$("#item_name").fadeTo(700, 0, function() {
+							$(this).html(span_menu_desc[button][0]).fadeTo(700,1);
+						});
+						$("img.arrow").fadeTo(700, 0, function() {
+							$(this).fadeTo(700,1);
+						});
+						$("#slide_pic").fadeTo(700, 0, function() {
+							$(this).attr('src',button+'/'+button+'_1.jpeg').fadeTo(700,1);
+						});
+						document.getElementById("preview_box").style.width = 89 * num_menu_items[button] + "px";
+					}
+					menu_active = button;
+					previewPics();
+				}
+			}
+		
+			// Menu slide show	
+			// Fade-in arrow and item name opacity
+			$(function() {
+        		$("#slideshow").hover(function(){
+            		$("img.arrow").fadeTo(1000).css('background-color','rgba(153,0,0,.7)');
+            		$("#item_name").fadeTo(1000).css('background-color','rgba(153,0,0,.7)');
+            		$("#item_name").fadeTo(1000).css('color','rgba(255,255,255,0.7)');
+        		}, 
+        		function(){
+           			$("img.arrow").fadeTo(1000).css('background-color','rgba(153,0,0,.5)');
+           			$("#item_name").fadeTo(1000).css('background-color','rgba(153,0,0,.5)');
+           			$("#item_name").fadeTo(1000).css('color','rgba(255,255,255,0.5)');
+        		});
+    		});
+		
+			// Show next image in slideshow
+			function nextImage(slidejump) {
+				var cur_img = document.getElementById("slide_pic").src;
+				var underscore = cur_img.lastIndexOf("_")+1;
+				var next_img_index = cur_img.slice(underscore,cur_img.lastIndexOf(".jpeg")) * 1 + slidejump;
+				if (next_img_index < 1 ) {
+					next_img_index = num_menu_items[menu_active];
+				} else if (next_img_index > num_menu_items[menu_active]) {
+					next_img_index = 1;
+				}
+				var next_img_src = cur_img.substring(0,underscore) + next_img_index + ".jpeg";
+				$("#slide_pic").fadeTo(700, 0, function() {
+					$(this).attr('src',next_img_src).fadeTo(700,1);
+				});
+				document.getElementById("item_name").innerHTML = span_menu_desc[menu_active][next_img_index-1];
+			}
+			
+			//Slide show preview pictures
+			function previewPics() {
+				document.getElementById("preview_box").innerHTML = "";
+				document.getElementById("preview_box").style.width = 89 * num_menu_items[menu_active] + "px";
+				for (i=1; i<=num_menu_items[menu_active]; i++) {
+					var newPic = document.createElement('li');
+					newPic.innerHTML = '<li> <img class="slide_preview_pic" src="' + menu_active + "/" + menu_active + "_" + i + '.jpeg" alt="Slide Preview" onclick="changeSlide(' + i + ')"> </li>';
+					document.getElementById("preview_box").appendChild(newPic);
+				}
+				$("#slide_preview_box").animate({scrollLeft:0}, 'slow');
+			}
+			
+			//Allow preview slides to change the slide show
+			function changeSlide(picIndex) {
+				var next_img_src = menu_active + "/" + menu_active + "_" + picIndex + ".jpeg";
+				$("#slide_pic").fadeTo(700, 0, function() {
+					$(this).attr('src',next_img_src).fadeTo(700,1);
+				});
+				document.getElementById("item_name").innerHTML = span_menu_desc[menu_active][picIndex-1];
+			}
+			
+			function scrollPreviewPics(scrollDirection) {
+				$("#slide_preview_box").animate({scrollLeft:$("#slide_preview_box").scrollLeft()+440*scrollDirection}, 'slow'); 
+			}
+		</script>
+</html>
